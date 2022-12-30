@@ -40,17 +40,38 @@ def classify_image(data, image_obj, index):
     nature_checkbox.pack()
     assorted_checkbox.pack()
     # Create the submit button
-    submit_button = tk.Button(root, text="Submit",
-                              command=lambda: update_categories(data, dog_var, nature_var, assorted_var, image_obj,
-                                                                index,
-                                                                dog_checkbox, nature_checkbox, assorted_checkbox,
-                                                                submit_button))
+    submit_button = tk.Button(
+        root,
+        text="Submit",
+        command=lambda: update_categories(
+            data,
+            dog_var,
+            nature_var,
+            assorted_var,
+            image_obj,
+            index,
+            dog_checkbox,
+            nature_checkbox,
+            assorted_checkbox,
+            submit_button,
+        ),
+    )
     submit_button.pack()
 
 
 # Function to update the categories in the JSON object and write the data back to the file
-def update_categories(data, dog_var, nature_var, assorted_var, image_obj, index, dog_checkbox, nature_checkbox,
-                      assorted_checkbox, submit_button):
+def update_categories(
+    data,
+    dog_var,
+    nature_var,
+    assorted_var,
+    image_obj,
+    index,
+    dog_checkbox,
+    nature_checkbox,
+    assorted_checkbox,
+    submit_button,
+):
     categories = []
     if dog_var.get() == 1:
         categories.append("dog")

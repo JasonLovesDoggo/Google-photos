@@ -5,9 +5,6 @@ import requests
 from PIL import Image, ImageTk
 import json
 
-"""
-FYI THIS WAS MOSTLY CREATED USING CHATGPT SO DON'T EXPECT IT TO BE GOOD QUALITY
-"""
 # Open the JSON file and load the data
 with open("src.json", "r") as f:
     data = json.load(f)
